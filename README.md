@@ -4,6 +4,6 @@ This repostitory contains hashing.py, a file hashing script that takes an input 
 
 ## Usage
 
-- python hashing.py -path <FILE PATH>
-- python hasning.py -path <FILE PATH> -output <file/std-out/both>
-- python hashing.py -path <FILE PATH> -compare <True/False>
+- python hashing.py -path \<PATH>
+- python hasning.py -path \<PATH> -output <file/std-out/both>
+- python hashing.py -path \<PATH> -compare <True/False>
