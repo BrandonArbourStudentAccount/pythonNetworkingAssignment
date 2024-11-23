@@ -15,18 +15,38 @@ def getHash(path):
         print("Permission denied to \""+path+"\"")
         exit()
     except:
-        print("Something went wrong")
+        print("Something went wrong getHash")
         exit()
 
 def writeHash(hash):
-    outputFile=open('hashes.txt',mode='w')
-    outputFile.write(hash)
-    outputFile.close()
+    try:
+        outputFile=open('hashes.txt',mode='w')
+        outputFile.write(hash)
+        outputFile.close()
+    except FileNotFoundError:
+        print("The file \"hashes.txt\" does not exist")
+        exit()
+    except PermissionError:
+        print("Permission denied to \"hashes.txt\"")
+        exit()
+    except:
+        print("Something went wrong with writeHash")
+        exit()  
 
 def readHash():
-    hashFile=open('hashes.txt',mode='r')
-    fileText=hashFile.read()
-    return(fileText)
+    try:
+        hashFile=open('hashes.txt',mode='r')
+        fileText=hashFile.read()
+        return(fileText)
+    except FileNotFoundError:
+        print("The file \"hashes.txt\" does not exist")
+        exit()
+    except PermissionError:
+        print("Permission denied to \"hashes.txt\"")
+        exit()
+    except:
+        print("Something went wrong with readHash")
+        exit()
 
 parser=argparse.ArgumentParser(
     description="Creates a hash value for a file specified by the -path arguement. The hash value is output to standard out and hashes.txt by default.",
