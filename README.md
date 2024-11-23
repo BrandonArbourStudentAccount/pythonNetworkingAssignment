@@ -14,3 +14,13 @@ Calculate hash of file at \<PATH> then output to <file/std-out/both>
 
 Calculate hash of file at \<PATH> then compare to hash saved in hashes.text
 - python hashing.py -path \<PATH> -compare <True/False>
+
+## Example
+
+```
+C:\Users\CSAIT\Documents\pythonNetworkingAssignment> py hashing.py -path hashing.py
+4ab8bf0c11d141f36edb0c4a12a910aaedcd108f83ba4a967aefa9e8066e6edf
+
+C:\Users\CSAIT\Documents\pythonNetworkingAssignment> py hashing.py -path hashing.py -compare True
+Hash of hashing.py is the same as the saved hash.
+```
