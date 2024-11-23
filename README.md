@@ -4,6 +4,11 @@ This repostitory contains hashing.py, a file hashing script that takes an input 
 
 It also has an option to compare the hash of a file to the hash saved previously in hashes.txt. By default, hashes.txt contains the hash for hashing.py.
 
+## Prerequisites
+- Python 3
+  - argeparse (Built-in)
+  - hashlib (Build-in)
+
 ## Usage
 
 Calculate hash of file at \<PATH> then output to standard out and save to hashes.txt
