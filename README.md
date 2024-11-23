@@ -19,7 +19,7 @@ Calculate hash of file at \<PATH> then compare to hash saved in hashes.text
 
 ```
 C:\Users\CSAIT\Documents\pythonNetworkingAssignment> python hashing.py -path hashing.py
-f574e1264ae5b485183e984ab1fbed88b9aa3ffbfd1c29832ba3680025500990
+635fafbc2c8969eb2e5497392e13c7b419d173c4a6df5581e2330ced0fe0e86f
 
 C:\Users\CSAIT\Documents\pythonNetworkingAssignment> python hashing.py -path hashing.py -compare True
 Hash of hashing.py is the same as the saved hash.
