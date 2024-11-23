@@ -5,6 +5,7 @@ def getHash(path):
     try:
         inputFile=open(path,mode='r')
         fileText=inputFile.read().encode(encoding='UTF-8')
+        inputFile.close()
         hash=hashlib.sha256(fileText).hexdigest()
         return(hash)
     except FileNotFoundError:
@@ -16,7 +17,6 @@ def getHash(path):
     except:
         print("Something went wrong")
         exit()
-
 
 def writeHash(hash):
     outputFile=open('hashes.txt',mode='w')
