@@ -3,16 +3,13 @@ import argparse
 
 def getHash(path):
     try:
-        inputFile=open(path,mode='r')
-        fileText=inputFile.read().encode(encoding='UTF-8')
+        inputFile=open(path,mode='rb')
+        fileText=inputFile.read()
         inputFile.close()
         hash=hashlib.sha256(fileText).hexdigest()
         return(hash)
     except FileNotFoundError:
         print("The file \""+path+"\" does not exist.")
-        exit()
-    except UnicodeDecodeError:
-        print("The file \""+path+"\" can't be decoded.")
         exit()
     except:
         print("Something went wrong")
