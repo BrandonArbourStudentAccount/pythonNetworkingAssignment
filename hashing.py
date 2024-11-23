@@ -26,14 +26,14 @@ def readHash():
     return(fileText)
 
 parser=argparse.ArgumentParser(
-    description="File hashing arguements.",
+    description="Creates a hash value for a file specified by the -path arguement. The hash value is output to standard out and hashes.txt by default.",
     prefix_chars='-'
 )
 
 parser.add_argument('-path',
     type=str,
     required=True,
-    help="Path of file to be hashed."
+    help="Path of file to be hashed. This arguement is required"
 )
 
 parser.add_argument('-output',
