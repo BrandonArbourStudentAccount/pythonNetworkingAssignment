@@ -5,10 +5,13 @@ def getHash(path):
     try:
         inputFile=open(path,mode='r')
         fileText=inputFile.read().encode(encoding='UTF-8')
-        hash=hashlib.md5(fileText).hexdigest()
+        hash=hashlib.sha256(fileText).hexdigest()
         return(hash)
     except FileNotFoundError:
-        print("The directory \""+path+"\" does not exist.")
+        print("The file \""+path+"\" does not exist.")
+        exit()
+    except UnicodeDecodeError:
+        print("The file \""+path+"\" can't be decoded.")
         exit()
     except:
         print("Something went wrong")
