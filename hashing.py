@@ -9,7 +9,10 @@ def getHash(path):
         hash=hashlib.sha256(fileText).hexdigest()
         return(hash)
     except FileNotFoundError:
-        print("The file \""+path+"\" does not exist.")
+        print("The file \""+path+"\" does not exist")
+        exit()
+    except PermissionError:
+        print("Permission denied to \""+path+"\"")
         exit()
     except:
         print("Something went wrong")
